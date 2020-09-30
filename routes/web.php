@@ -13,6 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/master', function () {
     return view('layouts.master');
+});
+
+Route::get('/input', function () {
+    return view('input');
+});
+
+Route::get('/hmm', function () {
+    return view('hmm');
+});
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/', function () {
+    return view('layouts.medilab');
+});
+Route::get('/direktori', function () {
+    return view('rs');
 });

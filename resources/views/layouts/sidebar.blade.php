@@ -16,7 +16,7 @@
                             <!-- Nav Item - Dashboard -->
                             <li id="removable">
                             <ul class="submenu-angle page-mini-nb-dp" aria-expanded="false">
-                                <li><a title="Home" href="{{ ('Medilab') }}/index.html"><span class="educate-icon educate-home icon-wrap"></span></span><span class="mini-sub-pro">Home</span></a></li>
+                                <li><a title="Home" href="/"><span class="educate-icon educate-home icon-wrap"></span></span><span class="mini-sub-pro">Home</span></a></li>
                             </ul>
                             </li>
                         
@@ -24,20 +24,12 @@
                              <li id="removable">
                 
                              <ul class="submenu-angle page-mini-nb-dp" aria-expanded="false">
-                                <li><a title="Input" href="{{ ('frontend') }}/.html"><i class="fa fa-keyboard-o" aria-hidden="true"></i><span class="mini-sub-pro">Input</span></a></li>
+                                <li><a title="Input" href="/input"><i class="fa fa-keyboard-o" aria-hidden="true"></i><span class="mini-sub-pro">Input</span></a></li>
                             </ul>
-                            </li>
-
                             </li>
                              <li id="removable">
                             <ul class="submenu-angle page-mini-nb-dp" aria-expanded="false">
-                                <li><a title="Edit" href="{{ ('frontend') }}/.html"><i class="fa fa-edit" aria-hidden="true"></i><span class="mini-sub-pro">Edit</span></a></li>
-                            </ul>
-                            </li>
-                        </li>
-                             <li id="removable">
-                            <ul class="submenu-angle page-mini-nb-dp" aria-expanded="false">
-                                <li><a title="Login" href="{{ ('frontend') }}/login.html"><span class="educate-icon educate-pages icon-wrap"></span><span class="mini-sub-pro">Login</span></a></li>
+                                <li><a title="Logout" href="/direktori"><span class="educate-icon educate-pages icon-wrap"></span><span class="mini-sub-pro">Logout</span></a></li>
                             </ul>
                             </li>
                     </ul>

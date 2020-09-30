@@ -13,17 +13,17 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+  <link href="{{ 'medilab' }}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ 'medilab' }}/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="{{ 'medilab' }}/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="{{ 'medilab' }}/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="{{ 'medilab' }}/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="{{ 'medilab' }}/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="{{ 'medilab' }}/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="{{ 'medilab' }}/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{ 'medilab' }}/assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Medilab - v2.0.0
@@ -59,24 +59,19 @@
 
       <h1 class="logo mr-auto"><a href="index.html">Three_de</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="{{ 'medilab' }}assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Direktori</a></li>
-          <li><a href="#departments">Seputar Covid_19</a></li>
-          <li><a href="#doctors">Doctors</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li id="removable"></li>
-            </li>
-    
-            </li>
-        </div>
+          <li><a href="/direktori">Direktori</a></li>
+      </nav>
+      </div>
 
         </ul>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
@@ -227,48 +222,12 @@
       </div>
     </section><!-- End Counts Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Direktori Tempat  yang Menyediakan Test COVID-19</h2>
-          <p> situs ini mempermudah anda mencari tempat yang menyediakan test covid 
-            dan informasi seputar covid_19 di kota semarang</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <img src="assets/img/download.jpg">
-              <h4><a href="">Siloam Hospital Semarang</a></h4>
-              <p>Jl. Kompol Maksum No.296, Peterongan, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50242</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
-              <img src="assets/img/bisa.jpg">
-              <h4><a href="">rumah sakit tologorejo</a></h4>
-              <p>Jl. Kh Ahmad Dahlan, Pekunden, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50134</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <img src="assets/img/kecil.jpg">
-              <h4><a href="">RSJD Amino Gondohutomo SEmarang</a></h4>
-              <p>Jl. Brigjen Sudiarto No.347, Gemah, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50611</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
+    @yield('content')
 
     <!-- ======= Appointment Section ======= -->
     <section id="appointment" class="appointment section-bg">
       <div class="container">
-</section><!-- End Appointment Section -->
+    </section><!-- End Appointment Section -->
 
     <!-- ======= Departments Section ======= -->
     <section id="departments" class="departments">
@@ -308,7 +267,7 @@
                     <p>Kenakan masker hanya jika anda sakit.ganti secara berkala dan tetap tinggal di rumah,atau segera ke fasilitas kesehatan</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/masker.jpg" alt="" class="img-fluid">
+                    <img src="{{ 'medilab' }}/assets/img/masker.jpg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
@@ -319,7 +278,7 @@
                     <p>Salah satu yang ditekankan dalam protokol kesehatan Covid-19, adalah selalu menjaga jarak aman atau physical distancing, saat nanti kembali pada rutinas harian, baik bekerja, bersekolah maupun bersosialisasi.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/jaga.jpg" alt="" class="img-fluid">
+                    <img src="{{ 'medilab' }}/assets/img/jaga.jpg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
@@ -331,7 +290,7 @@
                       bersihkan dan lakukan disinfeksi permukaan benda yang sering di sentuh </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/bersih.jpg" alt="" class="img-fluid">
+                    <img src="{{ 'medilab' }}/assets/img/bersih.jpg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
@@ -346,7 +305,7 @@
                     </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/hidup sehat.png" alt="" class="img-fluid">
+                    <img src="{{ 'medilab' }}/assets/img/hidup sehat.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
@@ -358,7 +317,7 @@
                     <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/departments-5.jpg" alt="" class="img-fluid">
+                    <img src="{{ 'medilab' }}/assets/img/departments-5.jpg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
@@ -382,7 +341,7 @@
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/doctors/pp.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ 'medilab' }}/assets/img/doctors/pp.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4> Sang Aji Widi Aneswara</h4>
                 <p>Sang Aji pernah diperbantukan sebagai relawan untuk penanganan Covid-19 </p>
@@ -398,7 +357,7 @@
 
           <div class="col-lg-6 mt-4 mt-lg-0">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/doctors/erlina.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ 'medilab' }}/assets/img/doctors/erlina.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4> Elianna Widiastuti </h4>
                 <p>Elianna yang bertugas di Puskesmas Halmahera Semarang berpulang lebih dulu usai dirawat di RS Roeman </p>
@@ -414,7 +373,7 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/doctors/dok3.jpg" class="img-fluid" alt="text-lg-10"></div>
+              <div class="pic"><img src="{{ 'medilab' }}/assets/img/doctors/dok3.jpg" class="img-fluid" alt="text-lg-10"></div>
               <div class="member-info">
                 <h4>Ahmadi Nur Hud</h4>
                 <p>Beliau  mengembuskan napas terakhirnya di RSUD Wongsonegoro</p>
@@ -430,7 +389,7 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/doctors/fahmi.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ 'medilab' }}/assets/img/doctors/fahmi.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>M. Fahmi Arfai</h4>
                 <p>Beliau meninggal dunia saat tengah menangani pasien covid_19. </p>
@@ -449,46 +408,7 @@
       </div>
     </section><!-- End Doctors Section -->
 
-    <!-- ======= Tindakan Medis Section ======= -->
-    <section id="Tindakan medis" class="Tindakan medis">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Tindakan Medis</h2>
-          <p>Prosedur pemeriksaan yang dilakukan untuk mendeteksi Virus Corona pada tubuh pasien menggunakan CT Scan</p>
-        </div>
-
-        <div class="faq-list">
-          <ul>
-            <li data-aos="fade-up">
-              <p><i class="icofont-caret-right">Paket Rapid Test Antibodi ultima </i></p>
-                <p> Rp. 1.799.000</p>
-                <p>Rapid test + lab darah lengkap + CT Scan thorax + konsultasi dokter umum</p>
-              </div>
-            </li>
-            <div class="faq-list">
-              <ul>
-                <li data-aos="fade-up">
-                  <p><i class="icofont-caret-right">Paket Swab Raguler </i></p>
-                    <p> Rp 2.500.000 (exclude ongkir Rp 150.000)</p>
-                    <p>PCR hasil jadi kurang lebih 7-10 hari</p>
-                  </div>
-                </li>
-                <div class="faq-list">
-                  <ul>
-                    <li data-aos="fade-up">
-                      <p><i class="icofont-caret-right">Paket Swab fast track </i></p>
-                        <p>Rp 6.500.000 (exclude ongkir Rp 150.000)</p>
-                        <p>PCR hasil jadi kurang lebih 3-5 hari</p>
-                      </div>
-                    </li>
-           
-
-          </ul>
-        </div>
-
-      </div>
-    </section><!-- End Tindakan Medis Section -->
+    
 
       <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
@@ -505,64 +425,64 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-1.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              <a href="{{ 'medilab' }}/assets/img/gallery/gallery-1.jpg" class="venobox" data-gall="gallery-item">
+                <img src="{{ 'medilab' }}/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/pic3.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/pic3.jpg" alt="" class="img-fluid">
+              <a href="{{ 'medilab' }}/assets/img/gallery/pic3.jpg" class="venobox" data-gall="gallery-item">
+                <img src="{{ 'medilab' }}/assets/img/gallery/pic3.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/pic4.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/pic4.jpg" alt="" class="img-fluid">
+              <a href="{{ 'medilab' }}/assets/img/gallery/pic4.jpg" class="venobox" data-gall="gallery-item">
+                <img src="{{ 'medilab' }}/assets/img/gallery/pic4.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              <a href="{{ 'medilab' }}/assets/img/gallery/gallery.jpg" class="venobox" data-gall="gallery-item">
+                <img src="{{ 'medilab' }}/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/pic1.jpeg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/pic1.jpeg" alt="" class="img-fluid">
+              <a href="{{ 'medilab' }}/assets/img/gallery/pic1.jpeg" class="venobox" data-gall="gallery-item">
+                <img src="{{ 'medilab' }}/assets/img/gallery/pic1.jpeg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/pic6.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/pic6.jpg" alt="" class="img-fluid">
+              <a href="{{ 'medilab' }}/assets/img/gallery/pic6.jpg" class="venobox" data-gall="gallery-item">
+                <img src="{{ 'medilab' }}/assets/img/gallery/pic6.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-7.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              <a href="{{ 'medilab' }}/assets/img/gallery/gallery-7.jpg" class="venobox" data-gall="gallery-item">
+                <img src="{{ 'medilab' }}/assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-8.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              <a href="{{ 'medilab' }}/assets/img/gallery/gallery-8.jpg" class="venobox" data-gall="gallery-item">
+                <img src="{{ 'medilab' }}/assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
@@ -582,7 +502,7 @@
       </div>
 
       <div>
-        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126715.84250585646!2d110.34702396464287!3d-7.024554222546577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4d3f0d024d%3A0x1e0432b9da5cb9f2!2sSemarang%2C%20Kota%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1601389274400!5m2!1sid!2sid" frameborder="0" allowfullscreen></iframe>
       </div>
 
       
@@ -622,18 +542,18 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <script src="{{ 'medilab' }}/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="{{ 'medilab' }}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ 'medilab' }}/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="{{ 'medilab' }}/assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{ 'medilab' }}/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="{{ 'medilab' }}/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="{{ 'medilab' }}/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="{{ 'medilab' }}/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="{{ 'medilab' }}/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ 'medilab' }}/assets/js/main.js"></script>
 
 </body>
 
